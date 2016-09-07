@@ -11,6 +11,8 @@ def selection(elements):
 
     Returns:
         list: A list of elements sorted in ascending order.
+
+    .. versionadded:: 0.1.0
     """
     if not isinstance(elements, list):
         raise ValueError('A list of values should be given.')
