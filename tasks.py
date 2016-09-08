@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from invoke import task
+from invoke import run, task
 
 
 REQUIREMENTS = 'requirements-dev.txt'
