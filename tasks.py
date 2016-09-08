@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from invoke import run, task
+from invoke import run, task, Collection
 
 
 REQUIREMENTS = 'requirements-dev.txt'
@@ -92,3 +92,16 @@ def build(ctx):
 def release(ctx):
     """Upload package distribution to PyPI."""
     ctx.run('twine upload dist/*')
+
+
+namespace = Collection(clean,
+                       install,
+                       flake8,
+                       pylint,
+                       lint,
+                       unit,
+                       test,
+                       tox,
+                       docs,
+                       build,
+                       release)
