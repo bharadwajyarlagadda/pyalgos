@@ -91,4 +91,5 @@ def build(ctx):
 @task(pre=[build], post=[clean])
 def release(ctx):
     """Upload package distribution to PyPI."""
-    run('twine upload dist/*')
+    pwd = input('Enter Pypi password:')
+    run('twine upload -p {password} dist/*'.format(password=pwd))
