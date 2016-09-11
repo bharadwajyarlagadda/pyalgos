@@ -15,7 +15,14 @@ Links
 =====
 
 - Project: https://github.com/bharadwajyarlagadda/pyalgos
+- Documentation: http://pyalgos.readthedocs.io
+- Pypi: https://pypi.python.org/pypi/pyalgos
 - TravisCI: https://travis-ci.org/bharadwajyarlagadda/pyalgos
+
+Features
+========
+
+- Supported on Python 2.7 and Python 3.3+.
 
 
 .. |version| image:: https://img.shields.io/pypi/v/pyalgos.svg?style=flat-square
