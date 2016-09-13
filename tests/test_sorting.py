@@ -16,7 +16,10 @@ from pyalgos.sorting import insertion, selection
 
     # Case 3
     ([1.014, 1.12, 1.011, 1.56, 1.009, 2],
-     [1.009, 1.011, 1.014, 1.12, 1.56, 2])
+     [1.009, 1.011, 1.014, 1.12, 1.56, 2]),
+
+    # Case 4
+    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z'])
 ])
 def test_insertion_sort(data, expected):
     """Validates the insertion sort on the given list of values."""
@@ -24,7 +27,10 @@ def test_insertion_sort(data, expected):
 
 
 @parametrize('data,exception,error_msg', [
-    ((1, 4, 3, 5), ValueError, 'A list of values should be given')
+    ((1, 4, 3, 5), ValueError, 'A list of values should be given'),
+    ([1, 2, 3, 'hello'],
+     ValueError,
+     "int() and str() type can't be specified at the same time")
 ])
 def test_insertion_sort_error(data, exception, error_msg):
     """Validates the error if a non-list item is given."""
@@ -43,7 +49,10 @@ def test_insertion_sort_error(data, exception, error_msg):
 
     # Case 3
     ([1.014, 1.12, 1.011, 1.56, 1.009, 2],
-     [1.009, 1.011, 1.014, 1.12, 1.56, 2])
+     [1.009, 1.011, 1.014, 1.12, 1.56, 2]),
+
+    # Case 4
+    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z'])
 ])
 def test_selection_sort(data, expected):
     """Validates the selection sort on the given list of values."""
@@ -51,7 +60,10 @@ def test_selection_sort(data, expected):
 
 
 @parametrize('data,exception,error_msg', [
-    ((1, 4, 3, 5), ValueError, 'A list of values should be given')
+    ((1, 4, 3, 5), ValueError, 'A list of values should be given'),
+    ([1, 2, 3, 'hello'],
+     ValueError,
+     "int() and str() type can't be specified at the same time")
 ])
 def test_selection_sort_error(data, exception, error_msg):
     """Validates the error if a non-list item is given."""

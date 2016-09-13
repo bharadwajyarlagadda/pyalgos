@@ -17,9 +17,21 @@ def insertion(elements):
         list: A list of elements sorted in ascending order.
 
     .. versionadded:: 0.1.0
+
+    .. versionchanged:: 0.1.1
+        Added validation for checking whether every element in the list is a
+        string (when strings are provided in the list).
     """
     if not isinstance(elements, list):
         raise ValueError('A list of values should be given.')
+
+    is_str = all(isinstance(element, str) for element in elements)
+
+    if any(isinstance(element, str) for element in elements) and not is_str:
+        # When any of the element in the list is a string, we should then
+        # check whether all the other elements are strings or not.
+        raise ValueError("int() and str() type can't be specified at the same "
+                         "time")
 
     for pivot in range(1, len(elements)):
         next = pivot
