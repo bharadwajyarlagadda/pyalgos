@@ -24,6 +24,15 @@ Features
 
 - Supported on Python 2.7 and Python 3.3+.
 
+Quickstart
+==========
+
+Install using pip:
+
+::
+
+    pip install pyalgos
+
 
 .. |version| image:: https://img.shields.io/pypi/v/pyalgos.svg?style=flat-square
     :target: https://pypi.python.org/pypi/pyalgos/
