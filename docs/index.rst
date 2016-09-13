@@ -24,6 +24,15 @@ Project Info
     authors
     contributing
 
+Quickstart
+==========
+
+Install using pip:
+
+::
+
+    pip install pyalgos
+
 
 Indices and tables
 ==================

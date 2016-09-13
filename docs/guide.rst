@@ -47,3 +47,25 @@ You can use ``Selection Sort`` from ``pyalgos`` for both list of integers and li
     assert alphabets_sorted == ['a', 'b', 'w', 'y', 'z']
 
 .. note:: You can provide either list/tuple of values.
+
+
+Merge Sort
+^^^^^^^^^^
+
+A sorting algorithm that build the final sorted list of items. It is a divide and conquer algorithm.
+
+- Best/Average/Worst Cases: In all these cases, the running time is ``O(n * log(n))``.
+
+You can use ``Merge Sort`` from ``pyalgos`` for both list of integers and list of strings.
+
+.. code-block:: python
+
+    from pyalgos.sorting import merge
+
+    numbers_sorted = merge([3, 4, 2, 7, 5, 1])
+    alphabets_sorted = merge(['a', 'z', 'y', 'b', 'w'])
+
+    assert numbers_sorted == [1, 2, 3, 4, 5, 7]
+    assert alphabets_sorted == ['a', 'b', 'w', 'y', 'z']
+
+.. note:: You can provide either list/tuple of values.
