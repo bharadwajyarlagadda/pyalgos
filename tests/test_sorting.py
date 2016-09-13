@@ -26,6 +26,9 @@ from pyalgos.sorting import insertion, selection, merge
 
     # Case 6
     (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
+
+    # Case 7
+    ([1], [1])
 ])
 def test_insertion_sort(data, expected):
     """Validates the insertion sort on the given list of values."""
@@ -65,6 +68,9 @@ def test_insertion_sort_error(data, exception, error_msg):
 
     # Case 6
     (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
+
+    # Case 7
+    ([1], [1])
 ])
 def test_selection_sort(data, expected):
     """Validates the selection sort on the given list of values."""
@@ -104,8 +110,12 @@ def test_selection_sort_error(data, exception, error_msg):
 
     # Case 6
     (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
+
+    # Case 7
+    ([1], [1])
 ])
 def test_merge_sort(data, expected):
+    """Validates the selection sort on the given list of values."""
     assert merge(data) == expected
 
 

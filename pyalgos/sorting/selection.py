@@ -22,9 +22,17 @@ def selection(elements):
     .. versionchanged:: 0.1.2
         Added support for tuples. Now the user can also provide a tuple of
         values.
+
+    .. versionchanged:: 0.2.0
+        selection() can now return the list when the size of list is less than
+        or equal to 1.
     """
     if not isinstance(elements, (list, tuple)):
         raise ValueError('A list/tuple of values should be given.')
+
+    # A list of size 1 is already sorted.
+    if len(elements) <= 1:
+        return elements
 
     # Get the instance of the data structure given.
     instance = type(elements)

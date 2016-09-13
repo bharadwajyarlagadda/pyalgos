@@ -1,6 +1,12 @@
 Changelog
 =========
 
+v0.2.0
+------
+
+- Added ``merge()`` method for implementing merge sort algorithm.
+- ``insertion()/selection()`` can now just return the list when the size of list is less than or equal to 1.
+
 v0.1.2
 ------
 
