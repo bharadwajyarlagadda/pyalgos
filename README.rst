@@ -10,6 +10,7 @@ pyalgos is a package for implementing various algorithms:
 
   - Insertion Sort
   - Selection Sort
+  - Merge Sort
 
 Links
 =====
