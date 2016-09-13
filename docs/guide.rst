@@ -24,6 +24,9 @@ You can use ``Insertion Sort`` from ``pyalgos`` for both list of integers and li
     assert numbers_sorted == [1, 2, 3, 4, 5, 7]
     assert alphabets_sorted == ['a', 'b', 'w', 'y', 'z']
 
+.. note:: You can provide either list/tuple of values.
+
+
 Selection Sort
 ^^^^^^^^^^^^^^
 
@@ -43,3 +46,4 @@ You can use ``Selection Sort`` from ``pyalgos`` for both list of integers and li
     assert numbers_sorted == [1, 2, 3, 4, 5, 7]
     assert alphabets_sorted == ['a', 'b', 'w', 'y', 'z']
 
+.. note:: You can provide either list/tuple of values.

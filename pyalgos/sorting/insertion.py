@@ -11,19 +11,32 @@ def insertion(elements):
     this case, insertion sort has a quadratic running time O(pow(n,2)).
 
     Args:
-        elements (list): A list of values provided by the user.
+        elements (list/tuple): A list/tuple of values provided by the user.
 
     Returns:
-        list: A list of elements sorted in ascending order.
+        list/tuple: A list/tuple of elements sorted in ascending order.
 
     .. versionadded:: 0.1.0
 
     .. versionchanged:: 0.1.1
         Added validation for checking whether every element in the list is a
         string (when strings are provided in the list).
+
+    .. versionchanged:: 0.1.2
+        Added support for tuples. Now the user can also provide a tuple of
+        values.
     """
-    if not isinstance(elements, list):
-        raise ValueError('A list of values should be given.')
+    if not isinstance(elements, (list, tuple)):
+        raise ValueError('A list/tuple of values should be given.')
+
+    # Get the instance of the data structure given.
+    instance = type(elements)
+
+    if instance is tuple:
+        # Convert the tuple of elements to list of elements. We need to
+        # convert the tuple to list because a tuple is immutable. You cannot
+        # swap the elements of a tuple.
+        elements = list(elements)
 
     is_str = all(isinstance(element, str) for element in elements)
 
@@ -39,5 +52,10 @@ def insertion(elements):
             elements[next], elements[next - 1] = (elements[next - 1],
                                                   elements[next])
             next -= 1
+
+    if instance is tuple:
+        # Convert the data structure back to tuple if the user has provided a
+        # tuple of values.
+        elements = tuple(elements)
 
     return elements

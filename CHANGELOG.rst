@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v0.1.2
+------
+
+- Added support for ``tuple`` of values in both ``insertion()`` and ``selection()`` sorting methods.
+
 v0.1.1
 ------
 

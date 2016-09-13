@@ -19,7 +19,13 @@ from pyalgos.sorting import insertion, selection
      [1.009, 1.011, 1.014, 1.12, 1.56, 2]),
 
     # Case 4
-    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z'])
+    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z']),
+
+    # Case 5
+    ((14, -1, 3, -6, 19, -100), (-100, -6, -1, 3, 14, 19)),
+
+    # Case 6
+    (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
 ])
 def test_insertion_sort(data, expected):
     """Validates the insertion sort on the given list of values."""
@@ -27,7 +33,7 @@ def test_insertion_sort(data, expected):
 
 
 @parametrize('data,exception,error_msg', [
-    ((1, 4, 3, 5), ValueError, 'A list of values should be given'),
+    ({'a': 1}, ValueError, 'A list/tuple of values should be given'),
     ([1, 2, 3, 'hello'],
      ValueError,
      "int() and str() type can't be specified at the same time")
@@ -52,7 +58,13 @@ def test_insertion_sort_error(data, exception, error_msg):
      [1.009, 1.011, 1.014, 1.12, 1.56, 2]),
 
     # Case 4
-    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z'])
+    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z']),
+
+    # Case 5
+    ((14, -1, 3, -6, 19, -100), (-100, -6, -1, 3, 14, 19)),
+
+    # Case 6
+    (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
 ])
 def test_selection_sort(data, expected):
     """Validates the selection sort on the given list of values."""
@@ -60,7 +72,7 @@ def test_selection_sort(data, expected):
 
 
 @parametrize('data,exception,error_msg', [
-    ((1, 4, 3, 5), ValueError, 'A list of values should be given'),
+    ({'a': 1}, ValueError, 'A list/tuple of values should be given'),
     ([1, 2, 3, 'hello'],
      ValueError,
      "int() and str() type can't be specified at the same time")
