@@ -1,6 +1,11 @@
 Changelog
 =========
 
+v0.1.1
+------
+
+- Added validation for checking whether all the elements in a given list are strings or not in both ``insertion()`` and ``selection()`` sorting methods.
+
 v0.1.0
 ------
 
