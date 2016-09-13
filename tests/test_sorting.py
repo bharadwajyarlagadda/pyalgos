@@ -4,7 +4,7 @@ import pytest
 
 from .fixtures import parametrize
 
-from pyalgos.sorting import insertion, selection
+from pyalgos.sorting import insertion, selection, merge
 
 
 @parametrize('data,expected', [
@@ -39,7 +39,7 @@ def test_insertion_sort(data, expected):
      "int() and str() type can't be specified at the same time")
 ])
 def test_insertion_sort_error(data, exception, error_msg):
-    """Validates the error if a non-list item is given."""
+    """Validates the error based on the given values."""
     with pytest.raises(exception) as exc:
         insertion(data)
 
@@ -78,8 +78,46 @@ def test_selection_sort(data, expected):
      "int() and str() type can't be specified at the same time")
 ])
 def test_selection_sort_error(data, exception, error_msg):
-    """Validates the error if a non-list item is given."""
+    """Validates the error based on the given values."""
     with pytest.raises(exception) as exc:
         selection(data)
+
+    assert error_msg in str(exc)
+
+
+@parametrize('data,expected', [
+    # Case 1
+    ([5, 4, 6, 1, 7], [1, 4, 5, 6, 7]),
+
+    # Case 2
+    ([14, -1, 3, -6, 19, -100], [-100, -6, -1, 3, 14, 19]),
+
+    # Case 3
+    ([1.014, 1.12, 1.011, 1.56, 1.009, 2],
+     [1.009, 1.011, 1.014, 1.12, 1.56, 2]),
+
+    # Case 4
+    (['z', 'c', 'y', 'a'], ['a', 'c', 'y', 'z']),
+
+    # Case 5
+    ((14, -1, 3, -6, 19, -100), (-100, -6, -1, 3, 14, 19)),
+
+    # Case 6
+    (('z', 'c', 'y', 'a'), ('a', 'c', 'y', 'z')),
+])
+def test_merge_sort(data, expected):
+    assert merge(data) == expected
+
+
+@parametrize('data,exception,error_msg', [
+    ({'a': 1}, ValueError, 'A list/tuple of values should be given'),
+    ([1, 2, 3, 'hello'],
+     ValueError,
+     "int() and str() type can't be specified at the same time")
+])
+def test_merge_sort_error(data, exception, error_msg):
+    """Validates the error based on the given values."""
+    with pytest.raises(exception) as exc:
+        merge(data)
 
     assert error_msg in str(exc)
