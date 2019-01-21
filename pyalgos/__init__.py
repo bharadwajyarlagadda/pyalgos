@@ -9,3 +9,7 @@ from .__pkg__ import (
     __email__,
     __license__
 )
+
+from .insertion import insertion
+from .merge import merge
+from .selection import selection

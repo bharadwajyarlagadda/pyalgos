@@ -16,7 +16,7 @@ You can use ``Insertion Sort`` from ``pyalgos`` for both list of integers and li
 
 .. code-block:: python
 
-    from pyalgos.sorting import insertion
+    from pyalgos import insertion
 
     numbers_sorted = insertion([3, 4, 2, 7, 5, 1])
     alphabets_sorted = insertion(['a', 'z', 'y', 'b', 'w'])
@@ -38,7 +38,7 @@ You can use ``Selection Sort`` from ``pyalgos`` for both list of integers and li
 
 .. code-block:: python
 
-    from pyalgos.sorting import selection
+    from pyalgos import selection
 
     numbers_sorted = selection([3, 4, 2, 7, 5, 1])
     alphabets_sorted = selection(['a', 'z', 'y', 'b', 'w'])
@@ -60,7 +60,7 @@ You can use ``Merge Sort`` from ``pyalgos`` for both list of integers and list o
 
 .. code-block:: python
 
-    from pyalgos.sorting import merge
+    from pyalgos import merge
 
     numbers_sorted = merge([3, 4, 2, 7, 5, 1])
     alphabets_sorted = merge(['a', 'z', 'y', 'b', 'w'])

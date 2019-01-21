@@ -4,9 +4,9 @@ API Reference
 Sorting
 -------
 
-.. autofunction:: pyalgos.sorting.insertion
+.. autofunction:: pyalgos.insertion
 
-.. autofunction:: pyalgos.sorting.selection
+.. autofunction:: pyalgos.selection
 
-.. autofunction:: pyalgos.sorting.merge
+.. autofunction:: pyalgos.merge
 

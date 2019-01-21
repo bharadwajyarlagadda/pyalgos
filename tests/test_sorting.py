@@ -4,7 +4,7 @@ import pytest
 
 from .fixtures import parametrize
 
-from pyalgos.sorting import insertion, selection, merge
+from pyalgos import insertion, selection, merge
 
 
 @parametrize('data,expected', [
